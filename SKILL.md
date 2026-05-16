@@ -329,7 +329,7 @@ The compose.py script lives in the skill directory. Run it to create the determi
 **IMPORTANT — Batch all 3 scaffolds into a single Bash call** to minimize permission prompts. Chain the commands with `&&` so the user only needs to approve once:
 
 ```bash
-SKILL_DIR="$HOME/.claude/skills/aso-appstore-screenshots" && \
+SKILL_DIR="$HOME/.claude/skills/aso-appstore-screenshots-flutter" && \
 mkdir -p screenshots/01-[benefit-slug] screenshots/02-[benefit-slug] screenshots/03-[benefit-slug] && \
 python3 "$SKILL_DIR/compose.py" \
   --bg "[HEX CODE]" --verb "[VERB 1]" --desc "[DESC 1]" \
@@ -569,11 +569,11 @@ Update this memory **incrementally** — after each screenshot is approved, add 
 Once ALL screenshots in the set are approved and saved to `final/`, generate a showcase image that displays up to 3 of the final screenshots side-by-side with a GitHub link. Use the showcase.py script in the skill directory:
 
 ```bash
-SKILL_DIR="$HOME/.claude/skills/aso-appstore-screenshots"
+SKILL_DIR="$HOME/.claude/skills/aso-appstore-screenshots-flutter"
 
 python3 "$SKILL_DIR/showcase.py" \
   --screenshots screenshots/final/01-*.jpg screenshots/final/02-*.jpg screenshots/final/03-*.jpg \
-  --github "github.com/adamlyttleapps" \
+  --github "github.com/amitm29" \
   --output screenshots/showcase.png
 ```
 

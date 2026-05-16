@@ -16,7 +16,7 @@ A Claude Code skill that generates high-converting **App Store** screenshots for
 ### 1. Add the skill to Claude Code
 
 ```bash
-claude install-skill github.com/adamlyttleapps/claude-skill-aso-appstore-screenshots-flutter
+claude install-skill github.com/amitm29/claude-skill-aso-appstore-screenshots-flutter
 ```
 
 ### 2. Install Python dependencies
